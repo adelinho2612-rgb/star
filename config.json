@@ -1,0 +1,104 @@
+{
+  "license_expiry_warning": true,
+  "license": "free",
+  "connection": {
+    "ssh_config": {
+      "port": 2222,
+      "display_banner": {
+        "enabled": true,
+        "banner": "**** Authorized users and purposes only - Violators will be prosecuted ****\r\n\r\nAccess to this and use of system are restricted to authorized users and\r\ndesignated purposes. Unauthorized acccess or access attempts to this system,\r\nas well as use of this system for prohibited purposes are a crime. Criminal\r\ntrespass to this system will be prosecuted.\r\n\r\nTo maintain proper system operation and detect/deter unauthorized use, system\r\nadministrators may monitor this system. All user activities may be observed,\r\nrecorded, and/or subject to automated logging.\r\n\r\n * Acceptance and Agreement *\r\nContinuing past this point constitutes attestation of your authorization to\r\naccess this system, agreement that your use of this system falls within the\r\nscope of allowed purposes, and your acceptance of and consent to monitoring,\r\nlogging, and recording of your activities.\r\n\r\n * Disagreement *\r\nIf you do not agree to all of the above, you must immediately disconnect from\r\nthis system."
+      }
+    },
+    "max_login_attempts": 5,
+    "initial_password_change": true,
+    "api_settings": {
+      "user_management_api": {
+        "port": 6060,
+        "enabled": true
+      },
+      "attack_api": {
+        "port": 5050,
+        "enabled": true
+      }
+    }
+  },
+  "cnc_options": {
+    "spam_protection": {
+      "per_user": {
+        "time": 300,
+        "attacks": 5
+      },
+      "per_target": {
+        "time": 120,
+        "attacks": 2
+      },
+      "enabled": true
+    },
+    "security": {
+      "ip_whitelist": {
+        "cnc": {
+          "ips": [
+            ""
+          ],
+          "enabled": false
+        },
+        "api": {
+          "ips": [
+            ""
+          ],
+          "enabled": false
+        }
+      },
+      "domain_lock": {
+        "domain": "",
+        "enabled": false
+      },
+      "captcha": {
+        "exclude_admins": true,
+        "enabled": false,
+        "captcha_chars": 5
+      },
+      "2fa": {
+        "forced": false,
+        "exclude_admins": true
+      }
+    },
+    "messaging": {
+      "enabled": true,
+      "cooldown": 10,
+      "allow_private_messages": true
+    },
+    "branding": {
+      "tos_page": {
+        "enabled": false
+      },
+      "termfx": {
+        "time_mode": "24H",
+        "note": "available modes are AM/PM, 24H",
+        "format": "$[%s]"
+      },
+      "spinner": {
+        "sleep_ms": 1000,
+        "frames": [
+          "/",
+          "-",
+          "\\",
+          "|"
+        ]
+      },
+      "print_line_delay": 5
+    }
+  },
+  "attack_options": {
+    "multicon": {
+      "max_cons_per_attack": 10,
+      "enabled": true
+    },
+    "enable_ssh_funnel": false,
+    "debug_mode_enabled": true,
+    "cnc_maxongoing": 4,
+    "cnc_cooldown": 0,
+    "attacks_enabled": false,
+    "admins_bypass_global_attacks": true
+  }
+}

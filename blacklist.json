@@ -1,0 +1,28 @@
+{
+  "soft": [
+    "gov",
+    "edu",
+    "military",
+    "pentagon",
+    "whitehouse",
+    "fbi",
+    "cia",
+    "153.31.*",
+    "https://someothersite.com",
+    "AS15169",
+    "13335",
+    "AS-AMAZON"
+  ],
+
+  "hard": [
+    "8.8.8.*",
+    "1.1.1.*",
+    "127.0.0.*",
+    "192.168.0.*",
+    "10.0.0.*",
+    "localhost",
+    "https://somesite.com",
+    "AS13335",
+    "15169"
+  ]
+}
